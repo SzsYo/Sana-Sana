@@ -1,0 +1,90 @@
+/* ============================================================
+   ZION LEAF — agegate.css
+   ============================================================ */
+
+.agegate{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--ink);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  transition: opacity 0.5s ease;
+}
+
+.agegate.is-leaving{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.agegate::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 42%, transparent 0, transparent 90px, var(--ink-line) 91px, var(--ink-line) 92px, transparent 93px),
+    radial-gradient(circle at 50% 42%, transparent 0, transparent 150px, var(--ink-line) 151px, var(--ink-line) 152px, transparent 153px),
+    radial-gradient(circle at 50% 42%, transparent 0, transparent 210px, var(--ink-line) 211px, var(--ink-line) 212px, transparent 213px);
+  opacity: 0.5;
+}
+
+.agegate__card{
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  padding: 56px 40px;
+  background: var(--ink-soft);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius);
+}
+
+.agegate__ring{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 26px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-deep);
+  position: relative;
+}
+.agegate__ring::before{
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+}
+
+.agegate__card h2{
+  font-size: 26px;
+  color: var(--bone);
+  margin-bottom: 14px;
+}
+
+.agegate__card p{
+  color: var(--bone-dim);
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 30px;
+}
+
+.agegate__actions{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.agegate__legal{
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  color: var(--bone-dim);
+  opacity: 0.6;
+  line-height: 1.7;
+}
+
+@media (max-width: 480px){
+  .agegate__actions{ flex-direction: column; }
+  .agegate__actions .btn{ width: 100%; justify-content: center; }
+}

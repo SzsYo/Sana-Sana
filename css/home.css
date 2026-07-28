@@ -1,0 +1,339 @@
+/* ============================================================
+   ZION LEAF — home.css
+   ============================================================ */
+
+/* ---------- HERO ---------- */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px var(--edge) 100px;
+  overflow: hidden;
+  background:
+    radial-gradient(1100px 700px at 82% 12%, rgba(201,160,92,0.10), transparent 60%),
+    var(--ink);
+}
+
+.hero__rings{
+  position: absolute;
+  right: -180px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 780px;
+  height: 780px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero__eyebrow{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.hero__eyebrow::before{
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero h1{
+  font-size: clamp(46px, 8vw, 108px);
+  color: var(--bone);
+  max-width: 15ch;
+}
+
+.hero h1 em{
+  font-style: normal;
+  color: var(--gold);
+}
+
+.hero__sub{
+  margin-top: 28px;
+  max-width: 46ch;
+  font-size: clamp(17px, 2vw, 20px);
+}
+
+.hero__actions{
+  margin-top: 44px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero__meta{
+  margin-top: 90px;
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.hero__meta div{
+  border-left: 1px solid var(--ink-line);
+  padding-left: 16px;
+}
+
+.hero__meta b{
+  display: block;
+  font-family: var(--f-display);
+  font-size: 28px;
+  color: var(--bone);
+  font-weight: 400;
+}
+
+.hero__meta span{
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+
+.hero__scrolldown{
+  position: absolute;
+  left: var(--edge);
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--bone-dim);
+  text-transform: uppercase;
+}
+
+.hero__scrolldown .line{
+  width: 40px;
+  height: 1px;
+  background: var(--bone-dim);
+  position: relative;
+  overflow: hidden;
+}
+.hero__scrolldown .line::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  animation: pulse-line 2.2s ease-in-out infinite;
+}
+@keyframes pulse-line{
+  0%{ transform: translateX(-100%); }
+  50%{ transform: translateX(0); }
+  100%{ transform: translateX(100%); }
+}
+
+/* ---------- SECTION SHELL ---------- */
+.section{
+  padding: 130px var(--edge);
+}
+.section--paper{
+  background: var(--paper);
+  color: var(--ink);
+}
+.section--paper .eyebrow{ color: var(--gold-deep); }
+
+.section__head{
+  max-width: 640px;
+  margin-bottom: 70px;
+}
+.section__head h2{
+  font-size: clamp(32px, 4.5vw, 54px);
+  margin-top: 16px;
+}
+.section--paper .section__head h2{ color: var(--ink); }
+.section__head p{
+  margin-top: 20px;
+  font-size: 16px;
+  max-width: 52ch;
+}
+
+/* ---------- FRANJA CULTURAL (marquee) ---------- */
+.marquee{
+  border-top: 1px solid var(--ink-line);
+  border-bottom: 1px solid var(--ink-line);
+  padding: 26px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee__track{
+  display: inline-flex;
+  gap: 40px;
+  animation: marquee 32s linear infinite;
+}
+.marquee span{
+  font-family: var(--f-display);
+  font-size: 22px;
+  color: var(--bone-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+}
+.marquee span em{
+  font-style: normal;
+  color: var(--gold);
+}
+@keyframes marquee{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* ---------- PRODUCTOS DESTACADOS (grid) ---------- */
+.pgrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.pcard{
+  background: var(--ink-soft);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius);
+  padding: 30px 26px 26px;
+  transition: border-color 0.35s ease, transform 0.35s ease;
+}
+.pcard:hover{
+  border-color: var(--gold-deep);
+  transform: translateY(-6px);
+}
+
+.pcard__strain{
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--herb);
+  margin-bottom: 18px;
+  display: block;
+}
+
+.pcard h3{
+  font-size: 24px;
+  color: var(--bone);
+  margin-bottom: 10px;
+}
+
+.pcard p{
+  font-size: 14px;
+  color: var(--bone-dim);
+  margin-bottom: 22px;
+}
+
+.pcard__stats{
+  display: flex;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--ink-line);
+}
+
+.pcard__stats div span{
+  display: block;
+}
+.pcard__stats .num{
+  font-family: var(--f-mono);
+  font-size: 17px;
+  color: var(--gold);
+}
+.pcard__stats .lbl{
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: var(--bone-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- PROCESO (numerado, sí tiene orden real) ---------- */
+.steps{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--paper-line);
+}
+.step{
+  padding: 34px 24px 0;
+  border-right: 1px solid var(--paper-line);
+}
+.step:last-child{ border-right: none; }
+.step__num{
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--gold-deep);
+}
+.step h4{
+  font-size: 19px;
+  margin: 14px 0 10px;
+  color: var(--ink);
+}
+.step p{
+  font-size: 13.5px;
+  color: #5c5546;
+}
+
+/* ---------- CULTURA (texto + imagen) ---------- */
+.culture{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.culture__art{
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--ink-line);
+}
+.culture__art img{
+  width: 100%; height: 100%; object-fit: cover;
+}
+.culture__quote{
+  margin-top: 30px;
+  padding-left: 22px;
+  border-left: 2px solid var(--gold);
+}
+.culture__quote p{
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--bone);
+}
+.culture__quote span{
+  display: block;
+  margin-top: 10px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--bone-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- CTA final ---------- */
+.cta{
+  text-align: center;
+  padding: 150px var(--edge);
+  background:
+    radial-gradient(700px 400px at 50% 0%, rgba(201,160,92,0.12), transparent 70%),
+    var(--ink);
+  border-top: 1px solid var(--ink-line);
+}
+.cta h2{
+  font-size: clamp(32px, 5vw, 58px);
+  max-width: 18ch;
+  margin: 0 auto 30px;
+}
+.cta .btn{ margin-top: 10px; }
+
+@media (max-width: 980px){
+  .pgrid{ grid-template-columns: 1fr 1fr; }
+  .culture{ grid-template-columns: 1fr; gap: 40px; }
+  .steps{ grid-template-columns: 1fr 1fr; }
+  .step{ border-right: none; border-bottom: 1px solid var(--paper-line); padding-bottom: 30px; margin-bottom: 10px;}
+}
+@media (max-width: 620px){
+  .pgrid{ grid-template-columns: 1fr; }
+  .steps{ grid-template-columns: 1fr; }
+  .hero__meta{ gap: 30px; }
+}

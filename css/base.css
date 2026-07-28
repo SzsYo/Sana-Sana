@@ -1,0 +1,164 @@
+/* ============================================================
+   ZION LEAF — base.css
+   Tokens, reset y fundamentos tipográficos
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  /* --- color: tierra, humo y ceniza dorada --- */
+  --ink:        #0D1F12;   /* verde casi negro, fondo principal */
+  --ink-soft:   #142A19;   /* panel elevado sobre ink */
+  --ink-line:   #23402B;   /* líneas divisorias sobre ink */
+  --bone:       #EDE6D6;   /* crema hueso, texto principal sobre ink */
+  --bone-dim:   #B9B29F;   /* texto secundario sobre ink */
+  --gold:       #C9A05C;   /* dorado terroso, acento primario */
+  --gold-deep:  #8A6B34;
+  --rust:       #8C3B2E;   /* rojo óxido, alerta / acento secundario */
+  --herb:       #7A9B4E;   /* verde lima desaturado, acento puntual */
+  --paper:      #F6F1E6;   /* fondo claro para secciones "papel" */
+  --paper-line: #DCD3BC;
+
+  /* --- tipografía --- */
+  --f-display: 'Bevan', 'Georgia', serif;
+  --f-serif:   'Fraunces', Georgia, serif;
+  --f-body:    'Inter', -apple-system, sans-serif;
+  --f-mono:    'JetBrains Mono', monospace;
+
+  /* --- ritmo --- */
+  --nav-w: 128px;
+  --edge: clamp(24px, 5vw, 72px);
+  --radius: 2px;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *, *::before, *::after{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+  margin: 0;
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-right: var(--nav-w);
+  overflow-x: hidden;
+}
+
+img{ max-width: 100%; display: block; }
+
+a{ color: inherit; text-decoration: none; }
+
+h1,h2,h3,h4{
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+p{ margin: 0; }
+
+ul{ margin: 0; padding: 0; list-style: none; }
+
+button{
+  font-family: var(--f-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::selection{
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* --- utilidades tipográficas compartidas --- */
+.eyebrow{
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.serif-lede{
+  font-family: var(--f-serif);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--bone-dim);
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  font-family: var(--f-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  color: var(--bone);
+  border-radius: var(--radius);
+  transition: background 0.35s ease, color 0.35s ease, transform 0.35s ease;
+}
+.btn:hover{
+  background: var(--gold);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+.btn.solid{
+  background: var(--gold);
+  color: var(--ink);
+}
+.btn.solid:hover{
+  background: var(--bone);
+  border-color: var(--bone);
+}
+
+/* --- reveal on scroll --- */
+.reveal{
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(.16,.84,.44,1), transform 0.9s cubic-bezier(.16,.84,.44,1);
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-stagger > *{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-stagger.is-visible > *{
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-stagger.is-visible > *:nth-child(1){ transition-delay: 0.02s; }
+.reveal-stagger.is-visible > *:nth-child(2){ transition-delay: 0.10s; }
+.reveal-stagger.is-visible > *:nth-child(3){ transition-delay: 0.18s; }
+.reveal-stagger.is-visible > *:nth-child(4){ transition-delay: 0.26s; }
+.reveal-stagger.is-visible > *:nth-child(5){ transition-delay: 0.34s; }
+.reveal-stagger.is-visible > *:nth-child(6){ transition-delay: 0.42s; }
+
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--edge);
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos — Zion Leaf</title>
+<meta name="description" content="Catálogo de flor, aceites y extractos de cannabis medicinal, con perfil de cannabinoides verificado en laboratorio.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/agegate.css">
+<link rel="stylesheet" href="css/productos.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<div class="agegate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="agegate-title">
+  <div class="agegate__card">
+    <div class="agegate__ring"></div>
+    <h2 id="agegate-title">Antes de entrar</h2>
+    <p>Este sitio presenta información sobre cannabis medicinal y requiere que confirmes tu edad y el propósito de tu visita.</p>
+    <div class="agegate__actions">
+      <button class="btn solid" data-age-yes>Soy mayor de 18</button>
+      <button class="btn" data-age-no>Salir</button>
+    </div>
+    <p class="agegate__legal">El acceso y la venta de productos están sujetos a la normativa vigente sobre cannabis medicinal y a la presentación de prescripción o registro de paciente donde la ley lo exija.</p>
+  </div>
+</div>
+
+<nav class="sidenav" aria-label="Navegación principal">
+  <div class="sidenav__mark">ZION <span>LEAF</span></div>
+  <ul class="sidenav__tracks">
+    <li><a class="sidenav__track" href="index.html"><span>01</span>Inicio</a></li>
+    <li><a class="sidenav__track is-active" href="productos.html"><span>02</span>Tienda</a></li>
+    <li><a class="sidenav__track" href="nosotros.html"><span>03</span>Nosotros</a></li>
+    <li><a class="sidenav__track" href="como-comprar.html"><span>04</span>Comprar</a></li>
+    <li><a class="sidenav__track" href="contacto.html"><span>05</span>Contacto</a></li>
+  </ul>
+  <div class="sidenav__foot">
+    <div class="sidenav__ring"></div>
+    <span class="sidenav__age">18+ · USO MÉDICO</span>
+  </div>
+</nav>
+
+<main>
+  <header class="pagehead">
+    <span class="eyebrow reveal">Catálogo completo</span>
+    <h1 class="reveal">Cada variedad, con su ficha clínica</h1>
+    <p class="reveal">Filtra por tipo de efecto y revisa el perfil de cannabinoides antes de reservar tu retiro en tienda.</p>
+  </header>
+
+  <div class="filters reveal">
+    <button class="is-active" data-filter="todas">Todas</button>
+    <button data-filter="sativa">Sativa · Diurna</button>
+    <button data-filter="hibrida">Híbrida · Equilibrio</button>
+    <button data-filter="indica">Índica · Nocturna</button>
+    <button data-filter="aceite">Aceites y extractos</button>
+  </div>
+
+  <section class="catalog" id="catalog" data-empty="false">
+
+    <article class="item" data-cat="sativa">
+      <div class="item__media">
+        <span class="item__tag">Sativa</span>
+        <img src="https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=900&auto=format&fit=crop" alt="Cogollo de cannabis sativa">
+      </div>
+      <div class="item__body">
+        <h3>Lion's Dawn</h3>
+        <p>Perfil cítrico y despierto, para fatiga y dolor leve sin sedación.</p>
+        <div class="item__stats">
+          <div><span class="num">18%</span><span class="lbl">THC</span></div>
+          <div><span class="num">1%</span><span class="lbl">CBD</span></div>
+        </div>
+        <div class="item__foot">
+          <span class="item__price">$68.000<span>por 5 g</span></span>
+          <a href="como-comprar.html" class="item__cta">Reservar →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="item" data-cat="hibrida">
+      <div class="item__media">
+        <span class="item__tag">Híbrida</span>
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=900&auto=format&fit=crop" alt="Cogollo de cannabis híbrida">
+      </div>
+      <div class="item__body">
+        <h3>Blue Riddim</h3>
+        <p>Notas a madera y bayas, para ansiedad y tensión muscular crónica.</p>
+        <div class="item__stats">
+          <div><span class="num">14%</span><span class="lbl">THC</span></div>
+          <div><span class="num">6%</span><span class="lbl">CBD</span></div>
+        </div>
+        <div class="item__foot">
+          <span class="item__price">$72.000<span>por 5 g</span></span>
+          <a href="como-comprar.html" class="item__cta">Reservar →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="item" data-cat="indica">
+      <div class="item__media">
+        <span class="item__tag">Índica</span>
+        <img src="https://images.unsplash.com/photo-1616690248363-6f2f88a7f0d3?q=80&w=900&auto=format&fit=crop" alt="Cogollo de cannabis índica">
+      </div>
+      <div class="item__body">
+        <h3>Zion Night</h3>
+        <p>Perfil profundo y terroso, para insomnio y dolor severo supervisado.</p>
+        <div class="item__stats">
+          <div><span class="num">9%</span><span class="lbl">THC</span></div>
+          <div><span class="num">12%</span><span class="lbl">CBD</span></div>
+        </div>
+        <div class="item__foot">
+          <span class="item__price">$65.000<span>por 5 g</span></span>
+          <a href="como-comprar.html" class="item__cta">Reservar →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="item" data-cat="aceite">
+      <div class="item__media">
+        <span class="item__tag">Extracto</span>
+        <img src="https://images.unsplash.com/photo-1616690246849-30e15ee0b9a3?q=80&w=900&auto=format&fit=crop" alt="Frasco de aceite de cannabis medicinal">
+      </div>
+      <div class="item__body">
+        <h3>Ital Drops 1:1</h3>
+        <p>Tintura sublingual balanceada, dosificación exacta gota a gota.</p>
+        <div class="item__stats">
+          <div><span class="num">10mg</span><span class="lbl">THC/ml</span></div>
+          <div><span class="num">10mg</span><span class="lbl">CBD/ml</span></div>
+        </div>
+        <div class="item__foot">
+          <span class="item__price">$95.000<span>frasco 30 ml</span></span>
+          <a href="como-comprar.html" class="item__cta">Reservar →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="item" data-cat="sativa">
+      <div class="item__media">
+        <span class="item__tag">Sativa</span>
+        <img src="https://images.unsplash.com/photo-1550985543-49bee3167284?q=80&w=900&auto=format&fit=crop" alt="Cogollo de cannabis sativa en frasco">
+      </div>
+      <div class="item__body">
+        <h3>Golden Kingston</h3>
+        <p>Energizante y clara, apoya el manejo de fatiga crónica diurna.</p>
+        <div class="item__stats">
+          <div><span class="num">20%</span><span class="lbl">THC</span></div>
+          <div><span class="num">0.5%</span><span class="lbl">CBD</span></div>
+        </div>
+        <div class="item__foot">
+          <span class="item__price">$78.000<span>por 5 g</span></span>
+          <a href="como-comprar.html" class="item__cta">Reservar →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="item" data-cat="aceite">
+      <div class="item__media">
+        <span class="item__tag">Extracto</span>
+        <img src="https://images.unsplash.com/photo-1590114538379-8082ab29a4f9?q=80&w=900&auto=format&fit=crop" alt="Cápsulas de cannabis medicinal">
+      </div>
+      <div class="item__body">
+        <h3>Roots Caps CBD</h3>
+        <p>Cápsulas de liberación lenta, ideales para tratamientos sostenidos.</p>
+        <div class="item__stats">
+          <div><span class="num">2mg</span><span class="lbl">THC/cáps</span></div>
+          <div><span class="num">25mg</span><span class="lbl">CBD/cáps</span></div>
+        </div>
+        <div class="item__foot">
+          <span class="item__price">$88.000<span>caja x30</span></span>
+          <a href="como-comprar.html" class="item__cta">Reservar →</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot__top">
+    <div class="sitefoot__brand">
+      <h3>Zion Leaf</h3>
+      <p>Dispensario médico licenciado. Cultivo, análisis de laboratorio y acompañamiento clínico bajo un mismo techo, con raíz en la cultura jamaiquina.</p>
+      <div class="sitefoot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="sitefoot__col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="como-comprar.html">Cómo comprar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="sitefoot__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Licencia de dispensario</a></li>
+        <li><a href="#">Política de devoluciones</a></li>
+      </ul>
+    </div>
+    <div class="sitefoot__col">
+      <h4>Contacto</h4>
+      <address>
+        Calle Ital 45, Kingston 6<br>
+        Lun–Sáb · 9:00–19:00<br>
+        hola@zionleaf.com<br>
+        +1 (876) 555-0142
+      </address>
+    </div>
+  </div>
+  <div class="sitefoot__legal">
+    <p>© 2026 Zion Leaf. Todos los derechos reservados. Producto regulado — venta exclusiva a pacientes registrados mayores de edad, bajo la normativa de cannabis medicinal vigente en tu jurisdicción.</p>
+    <div class="links">
+      <a href="#">Licencia N.º MJ-2291</a>
+      <a href="#">Reportar un problema</a>
+    </div>
+  </div>
+  <div class="sitefoot__disclaimer">
+    <p>⚠ Este producto no ha sido evaluado por ninguna autoridad sanitaria fuera del marco de cannabis medicinal aplicable. Consulta siempre a tu médico tratante. No conduzcas ni operes maquinaria bajo sus efectos. Manténgase fuera del alcance de niños y mascotas.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const buttons = document.querySelectorAll('.filters button');
+  const items = document.querySelectorAll('.item');
+  const catalog = document.getElementById('catalog');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const filter = btn.dataset.filter;
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const show = filter === 'todas' || item.dataset.cat === filter;
+        item.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      catalog.dataset.empty = visibleCount === 0 ? 'true' : 'false';
+    });
+  });
+</script>
+</body>
+</html>

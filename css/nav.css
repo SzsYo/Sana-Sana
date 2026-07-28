@@ -1,0 +1,159 @@
+/* ============================================================
+   ZION LEAF — nav.css
+   Barra de navegación vertical, anclada al borde derecho
+   ============================================================ */
+
+.sidenav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--nav-w);
+  height: 100vh;
+  background: var(--ink-soft);
+  border-left: 1px solid var(--ink-line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+  z-index: 200;
+}
+
+.sidenav__mark{
+  writing-mode: vertical-rl;
+  font-family: var(--f-display);
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+}
+
+.sidenav__mark span{
+  color: var(--bone-dim);
+}
+
+.sidenav__tracks{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+  padding-left: 12px;
+}
+
+.sidenav__track{
+  writing-mode: horizontal-tb;
+  transform: none;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 8px 10px;
+  width: calc(100% - 20px);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.sidenav__track::before{
+  content: attr(data-index);
+  color: var(--gold-deep);
+  font-size: 10px;
+}
+
+.sidenav__track:hover,
+.sidenav__track.is-active{
+  color: var(--bone);
+}
+
+.sidenav__track.is-active::before{
+  color: var(--gold);
+}
+
+.sidenav__track.is-active::after{
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.sidenav__foot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.sidenav__ring{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-line);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.sidenav__ring::before,
+.sidenav__ring::after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--gold-deep);
+  opacity: 0.6;
+}
+.sidenav__ring::before{ inset: 6px; }
+.sidenav__ring::after{ inset: 12px; border-color: var(--gold); }
+
+.sidenav__age{
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: var(--bone-dim);
+  writing-mode: vertical-rl;
+  letter-spacing: 0.08em;
+}
+
+/* --- toggle para móvil --- */
+.navtoggle{
+  display: none;
+}
+
+@media (max-width: 860px){
+  body{ padding-right: 0; padding-bottom: 64px; }
+
+  .sidenav{
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 64px;
+    flex-direction: row;
+    border-left: none;
+    border-top: 1px solid var(--ink-line);
+    padding: 0 18px;
+    overflow-x: auto;
+  }
+
+  .sidenav__mark,
+  .sidenav__foot{
+    display: none;
+  }
+
+  .sidenav__tracks{
+    flex-direction: row;
+    gap: 22px;
+    height: 100%;
+    align-items: center;
+  }
+
+  .sidenav__track{
+    writing-mode: horizontal-tb;
+    transform: none;
+    white-space: nowrap;
+  }
+}

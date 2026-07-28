@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Zion Leaf</title>
+<meta name="description" content="Agenda tu consulta o registro de paciente con Zion Leaf, dispensario médico de cannabis inspirado en la cultura jamaiquina.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/agegate.css">
+<link rel="stylesheet" href="css/contacto.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<div class="agegate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="agegate-title">
+  <div class="agegate__card">
+    <div class="agegate__ring"></div>
+    <h2 id="agegate-title">Antes de entrar</h2>
+    <p>Este sitio presenta información sobre cannabis medicinal y requiere que confirmes tu edad y el propósito de tu visita.</p>
+    <div class="agegate__actions">
+      <button class="btn solid" data-age-yes>Soy mayor de 18</button>
+      <button class="btn" data-age-no>Salir</button>
+    </div>
+    <p class="agegate__legal">El acceso y la venta de productos están sujetos a la normativa vigente sobre cannabis medicinal y a la presentación de prescripción o registro de paciente donde la ley lo exija.</p>
+  </div>
+</div>
+
+<nav class="sidenav" aria-label="Navegación principal">
+  <div class="sidenav__mark">ZION <span>LEAF</span></div>
+  <ul class="sidenav__tracks">
+    <li><a class="sidenav__track" href="index.html"><span>01</span>Inicio</a></li>
+    <li><a class="sidenav__track" href="productos.html"><span>02</span>Tienda</a></li>
+    <li><a class="sidenav__track" href="nosotros.html"><span>03</span>Nosotros</a></li>
+    <li><a class="sidenav__track" href="como-comprar.html"><span>04</span>Comprar</a></li>
+    <li><a class="sidenav__track is-active" href="contacto.html"><span>05</span>Contacto</a></li>
+  </ul>
+  <div class="sidenav__foot">
+    <div class="sidenav__ring"></div>
+    <span class="sidenav__age">18+ · USO MÉDICO</span>
+  </div>
+</nav>
+
+<main>
+  <div class="contactwrap">
+
+    <div class="contactinfo reveal">
+      <span class="eyebrow">Hablemos</span>
+      <h1>Agenda tu registro o resuelve tus dudas</h1>
+      <p>Nuestro equipo clínico responde en menos de 24 horas hábiles. Si ya eres paciente registrado, indícalo en el formulario para agilizar tu atención.</p>
+
+      <div class="contact-block">
+        <h4>Tienda</h4>
+        <p>Calle Ital 45, Kingston 6</p>
+        <span>Lun–Sáb · 9:00–19:00</span>
+      </div>
+      <div class="contact-block">
+        <h4>Correo</h4>
+        <p>hola@zionleaf.com</p>
+      </div>
+      <div class="contact-block">
+        <h4>Teléfono / WhatsApp</h4>
+        <p>+1 (876) 555-0142</p>
+      </div>
+    </div>
+
+    <div class="form-card reveal" id="form-card">
+      <form id="contact-form">
+        <div class="field">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required placeholder="tucorreo@ejemplo.com">
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 000 0000">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="motivo">Motivo de contacto</label>
+          <select id="motivo" name="motivo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="registro">Registro de paciente nuevo</option>
+            <option value="consulta">Consulta sobre un producto</option>
+            <option value="seguimiento">Seguimiento de tratamiento</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos brevemente qué necesitas"></textarea>
+        </div>
+
+        <div class="checkline">
+          <input type="checkbox" id="mayor" name="mayor" required>
+          <label for="mayor">Confirmo que soy mayor de 18 años y que la información suministrada es verídica.</label>
+        </div>
+
+        <button type="submit" class="btn solid">Enviar mensaje</button>
+        <p class="form-note">Tus datos se usan únicamente para gestionar tu registro clínico y no se comparten con terceros.</p>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <div class="ring">✓</div>
+        <h3>Mensaje enviado</h3>
+        <p>Gracias — un miembro de nuestro equipo clínico se pondrá en contacto contigo pronto.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot__top">
+    <div class="sitefoot__brand">
+      <h3>Zion Leaf</h3>
+      <p>Dispensario médico licenciado. Cultivo, análisis de laboratorio y acompañamiento clínico bajo un mismo techo, con raíz en la cultura jamaiquina.</p>
+      <div class="sitefoot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="sitefoot__col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="como-comprar.html">Cómo comprar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="sitefoot__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Licencia de dispensario</a></li>
+        <li><a href="#">Política de devoluciones</a></li>
+      </ul>
+    </div>
+    <div class="sitefoot__col">
+      <h4>Contacto</h4>
+      <address>
+        Calle Ital 45, Kingston 6<br>
+        Lun–Sáb · 9:00–19:00<br>
+        hola@zionleaf.com<br>
+        +1 (876) 555-0142
+      </address>
+    </div>
+  </div>
+  <div class="sitefoot__legal">
+    <p>© 2026 Zion Leaf. Todos los derechos reservados. Producto regulado — venta exclusiva a pacientes registrados mayores de edad, bajo la normativa de cannabis medicinal vigente en tu jurisdicción.</p>
+    <div class="links">
+      <a href="#">Licencia N.º MJ-2291</a>
+      <a href="#">Reportar un problema</a>
+    </div>
+  </div>
+  <div class="sitefoot__disclaimer">
+    <p>⚠ Este producto no ha sido evaluado por ninguna autoridad sanitaria fuera del marco de cannabis medicinal aplicable. Consulta siempre a tu médico tratante. No conduzcas ni operes maquinaria bajo sus efectos. Manténgase fuera del alcance de niños y mascotas.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+  const card = document.getElementById('form-card');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    card.classList.add('is-sent');
+    success.classList.add('is-visible');
+  });
+</script>
+</body>
+</html>

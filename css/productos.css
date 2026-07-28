@@ -1,0 +1,162 @@
+/* ============================================================
+   ZION LEAF — productos.css
+   ============================================================ */
+
+.pagehead{
+  padding: 150px var(--edge) 80px;
+  border-bottom: 1px solid var(--ink-line);
+}
+.pagehead h1{
+  font-size: clamp(38px, 6vw, 70px);
+  max-width: 16ch;
+  margin-top: 18px;
+}
+.pagehead p{
+  margin-top: 22px;
+  max-width: 52ch;
+  font-size: 17px;
+}
+
+/* ---------- filtros ---------- */
+.filters{
+  padding: 40px var(--edge) 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.filters button{
+  padding: 10px 20px;
+  border: 1px solid var(--ink-line);
+  border-radius: 999px;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  transition: all 0.3s ease;
+}
+.filters button:hover{
+  border-color: var(--gold-deep);
+  color: var(--bone);
+}
+.filters button.is-active{
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+/* ---------- catálogo completo ---------- */
+.catalog{
+  padding: 60px var(--edge) 140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.catalog[data-empty="true"]::after{
+  content: "No hay variedades en esta categoría por ahora.";
+  grid-column: 1 / -1;
+  font-family: var(--f-mono);
+  font-size: 13px;
+  color: var(--bone-dim);
+  padding: 60px 0;
+  text-align: center;
+  border: 1px dashed var(--ink-line);
+  border-radius: var(--radius);
+}
+
+.item{
+  background: var(--ink-soft);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.item:hover{
+  transform: translateY(-6px);
+  border-color: var(--gold-deep);
+}
+
+.item__media{
+  aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+}
+.item__media img{
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.item:hover .item__media img{ transform: scale(1.06); }
+
+.item__tag{
+  position: absolute;
+  top: 14px; left: 14px;
+  background: rgba(13,31,18,0.85);
+  border: 1px solid var(--gold-deep);
+  color: var(--gold);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.item__body{
+  padding: 24px 22px 26px;
+}
+.item__body h3{
+  font-size: 21px;
+  color: var(--bone);
+  margin-bottom: 8px;
+}
+.item__body p{
+  font-size: 13.5px;
+  color: var(--bone-dim);
+  margin-bottom: 18px;
+}
+
+.item__stats{
+  display: flex;
+  gap: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--ink-line);
+  margin-bottom: 18px;
+}
+.item__stats div span{ display:block; }
+.item__stats .num{ font-family: var(--f-mono); font-size: 16px; color: var(--gold); }
+.item__stats .lbl{ font-family: var(--f-mono); font-size: 9.5px; color: var(--bone-dim); text-transform: uppercase; }
+
+.item__foot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item__price{
+  font-family: var(--f-mono);
+  font-size: 15px;
+  color: var(--bone);
+}
+.item__price span{
+  display: block;
+  font-size: 9.5px;
+  color: var(--bone-dim);
+  text-transform: uppercase;
+}
+
+.item__cta{
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold-deep);
+  padding-bottom: 2px;
+}
+
+@media (max-width: 980px){
+  .catalog{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px){
+  .catalog{ grid-template-columns: 1fr; }
+}
