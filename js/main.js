@@ -1,5 +1,5 @@
 // ============================================================
-// ZION LEAF — main.js
+// SANA SANA — main.js
 // Scroll reveal, nav activa por sección, verificación de edad
 // ============================================================
 

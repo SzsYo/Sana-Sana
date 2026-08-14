@@ -1,5 +1,5 @@
 /* ============================================================
-   ZION LEAF — nav.css
+   SANA SANA — nav.css
    Barra de navegación vertical, anclada al borde derecho
    ============================================================ */
 
@@ -15,12 +15,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 0;
+  padding: 10px 0;
   z-index: 200;
+  text-decoration: none;
 }
 
+
+
 .sidenav__mark{
-  writing-mode: vertical-rl;
+  padding-top: 10px;
   font-family: var(--f-display);
   font-size: 15px;
   letter-spacing: 0.18em;
