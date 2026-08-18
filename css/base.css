@@ -60,7 +60,16 @@ body{
 
 img{ max-width: 100%; display: block; }
 
-a{ color: inherit; text-decoration: none; }
+/* --- Eliminar underlines de todos los enlaces --- */
+a{ 
+  color: inherit; 
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+a:hover, a:focus, a:active, a:visited{
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
 
 h1,h2,h3,h4{
   margin: 0;
@@ -116,11 +125,15 @@ button{
   color: var(--bone);
   border-radius: var(--radius);
   transition: background 0.35s ease, color 0.35s ease, transform 0.35s ease;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 .btn:hover{
   background: var(--gold);
   color: var(--ink);
   transform: translateY(-2px);
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 .btn.solid{
   background: var(--gold);
@@ -129,6 +142,8 @@ button{
 .btn.solid:hover{
   background: var(--bone);
   border-color: var(--bone);
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 /* --- reveal on scroll --- */

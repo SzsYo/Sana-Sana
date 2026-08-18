@@ -20,7 +20,12 @@
   text-decoration: none;
 }
 
-
+.sidenav img{
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
 
 .sidenav__mark{
   padding-top: 10px;
@@ -40,7 +45,8 @@
   align-items: flex-start;
   gap: 18px;
   width: 100%;
-  padding-left: 12px;
+  padding-left: 0px;
+  padding-right: 20px;
 }
 
 .sidenav__track{
@@ -59,6 +65,8 @@
   width: calc(100% - 20px);
   position: relative;
   transition: color 0.3s ease;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 .sidenav__track::before{

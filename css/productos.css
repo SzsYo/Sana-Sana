@@ -150,7 +150,8 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--gold);
-  border-bottom: 1px solid var(--gold-deep);
+  text-decoration: none !important;
+  border-bottom: none !important;
   padding-bottom: 2px;
 }
 
